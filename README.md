@@ -2,7 +2,7 @@
 ### Data engineering using regex
 
 All code is here:
-https://github.com/byambaa1982/lstm_model/blob/master/main.py
+https://github.com/byambaa1982/usefulregex/blob/master/main.py
 
 If you want to fork the project on github and git clone your fork, e.g.:
 
