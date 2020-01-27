@@ -25,3 +25,16 @@ def only_number(my_list):
     except:
       to_numbers.append(np.nan)
   return to_numbers
+
+def str_to_float(a_str):
+  try:
+    a_num=float(re.sub('[^0-9,]', "", a_str))
+  except:
+    a_num=np.nan
+  return a_num
+
+def change_df(df):
+  for i in range(0,df.shape[1]):
+    print(df.columns[i])
+    df[str(df.columns[i])+'new']=df[str(df.columns[i])].map(lambda row:str_to_float(row))
+  return df
