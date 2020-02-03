@@ -19,6 +19,18 @@ Problem is that we cannot use following codes because of symbols like '--' or '-
 
 	df['DataFrame Column'] = df['DataFrame Column'].astype(int)
 
+If we check like the following codes, it will give us 'str' not 'float'.
+
+	type(df['Temperature'])
+	type(df['Apparent temperature'])
+	type(df['Distance'])
+
+Results:
+
+	'str'
+	'str'
+	'str'
+
 
 Befor going further, start simple
 
