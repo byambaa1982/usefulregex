@@ -29,6 +29,9 @@ Regex can do this.
 
     re.sub('[^0-9,]', "", test[i])
 
-Please connect me in linkedin: https://www.linkedin.com/in/byamba-enkhbat-026722162/
+Please connect me in linkedin: 
+	https://www.linkedin.com/in/byamba-enkhbat-026722162/
+	
+	
 Hire me here:
-www.fiverr.com/coderjs
+	www.fiverr.com/coderjs
