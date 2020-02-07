@@ -9,7 +9,13 @@ If you want to fork the project on github and git clone your fork, e.g.:
     
 As a data scientist, I wasted a lot of time cleaning data, especially for dirty data like the following one.  
 
+Raw data 
+
 ![Data](/images/data_pic.png)
+
+Cleaned data
+
+![Data](/images/data_pic2.png)
 
 Problem is that we cannot use following codes because of symbols like '--' or '-' 
 

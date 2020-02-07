@@ -49,5 +49,29 @@ def point_str_to_float(a_str):
     a_num=np.nan
   return a_num
 
+#--------------no regex version---------------
+# ---------------turn any string into foat-------------
+def anystring_to_float(string):
+  newstring ="" 
+  my_float=""
+  count=0
+  for a in string: 
+      if a=='.' or (a.isnumeric()) == True: 
+          count+= 1
+          my_float+=a
+      else: 
+          newstring+= a 
+  print(count) 
+  print(newstring) 
+  print('data type of {} is now {}'.format(num, type(num))
+)
+  return float(my_float)
+
+# anystring_to_float(string)
 
 
+def change_df(df):
+  for i in indice_of_columns:
+    print(df.columns[i])
+    df[df.columns[i]]=df[df.columns[i]].map(lambda row:anystring_to_float(row))
+  return df
