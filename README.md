@@ -9,7 +9,7 @@ If you want to fork the project on github and git clone your fork, e.g.:
     
 As a data scientist, I wasted a lot of time cleaning data, especially for dirty data like the following one.  
 
-###Raw data 
+### Raw data 
 
 ![Data](/images/data_pic.png)
 
@@ -103,7 +103,7 @@ New result:
 	<class 'float'>
 
 
-###Cleaned data
+### Cleaned data
 
 ![Data](/images/data_pic2.png)
 
