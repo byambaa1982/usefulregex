@@ -53,12 +53,39 @@ Results:
 
 Befor going further, start simple
 
-    test=['23','byamba','df23','(312)-567-11','nan','1000M', 23,'--', np.nan]
+    string ='3ad.23'
     
-Let's clean this list. '23' is not digit. Also, I want to turn '(312)-567-11' into 3125670011.
-Regex can do this.
+Let's clean this string. '3ad.23' is not digit. 
 
-    re.sub('[^0-9,]', "", test[i])
+    def anystring_to_float(string):
+	  newstring ="" 
+	  my_float=""
+	  count=0
+	  for a in string: 
+	      if a=='.' or (a.isnumeric()) == True: 
+	          count+= 1
+	          my_float+=a
+	      else: 
+	          newstring+= a 
+	  # print(count) 
+	  # print(newstring) 
+	  # print('data type of {} is now {}'.format(num, type(num)))
+	  return float(my_float)
+
+
+This function turn any string into float. Then we can use it for pandas Dataframe. 
+
+	def change_df(df):
+	  for i in indice_of_columns:
+	    print(df.columns[i])
+	    df[df.columns[i]]=df[df.columns[i]].map(lambda row:anystring_to_float(row))
+	  return df
+
+Here indice_of_columns are the indice of columns we want to change. In our case, it is 
+
+	indice_of_columns=[5,7,8,9]
+
+Finally, we can run the function and get result. That simple!
 
 Please connect me in linkedin: 
 	https://www.linkedin.com/in/byamba-enkhbat-026722162/
