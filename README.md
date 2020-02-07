@@ -13,9 +13,6 @@ Raw data
 
 ![Data](/images/data_pic.png)
 
-Cleaned data
-
-![Data](/images/data_pic2.png)
 
 Problem is that we cannot use following codes because of symbols like '--' or '-' 
 
@@ -104,6 +101,12 @@ New result:
 	<class 'float'>
 	<class 'float'>
 	<class 'float'>
+
+
+Cleaned data
+
+![Data](/images/data_pic2.png)
+
 
 That simple!
 
