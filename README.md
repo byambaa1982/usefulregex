@@ -15,19 +15,20 @@ As a data scientist, I wasted a lot of time cleaning data, especially for dirty 
 
 
 Problem is that we cannot use following codes because of symbols like '--' or '-' 
-
+```python
 	df['DataFrame Column'] = pd.to_numeric(df['DataFrame Column'])
 
 	or 
 
 	df['DataFrame Column'] = df['DataFrame Column'].astype(int)
-
+```
 Let's take a look at one of following cells.
 
+```python
 	print(df['Temperature'][0])
 	print(df['Apparent temperature'][0])
 	print(df['Distance'][0])
-
+```
 Results:
 	
 	59.55   
@@ -36,11 +37,11 @@ Results:
 
 
 The first two looks like floats,but it will give us 'str' not 'float'.
-
+```python
 	print(type(df['Temperature'][0]))
 	print(type(df['Apparent temperature'][0]))
 	print(type(df['Distance'][0]))
-
+```
 Results:
 
 	<class 'str'>
