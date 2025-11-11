@@ -11,7 +11,7 @@ Master pandas with battle-tested tips, tricks, and real-world examples. Plus a l
 
 ---
 
-##  What''s Inside
+##  What's Inside
 
 ###  Pandas Tips & Tricks
 
