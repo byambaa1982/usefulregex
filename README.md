@@ -7,6 +7,8 @@
 
 Master pandas with battle-tested tips, tricks, and real-world examples. Plus a lightweight utility to clean messy numeric data without wrestling with regex.
 
+> 🌐 **Looking for more data science resources?** Visit [DataLogicHub.com](https://www.datalogichub.com/) and [DataLogicHub.net](https://www.datalogichub.net/) for tutorials, articles, and data analytics insights!
+
 ---
 
 ##  What''s Inside
@@ -213,7 +215,10 @@ Free to use, modify, and distribute. Attribution appreciated but not required.
 
 **Author:** Byamba Enkhbat  
 **LinkedIn:** [linkedin.com/in/byamba-enkhbat-026722162](https://www.linkedin.com/in/byamba-enkhbat-026722162/)  
-**GitHub:** [github.com/byambaa1982](https://github.com/byambaa1982)
+**GitHub:** [github.com/byambaa1982](https://github.com/byambaa1982)  
+**Website:** [DataLogicHub.com](https://www.datalogichub.com/) | [DataLogicHub.net](https://www.datalogichub.net/)
+
+📚 **Learn More:** Check out [DataLogicHub.com](https://www.datalogichub.com/) and [DataLogicHub.net](https://www.datalogichub.net/) for in-depth tutorials on data science, machine learning, and analytics!
 
 Found this helpful?  Star the repo to show support!
 
@@ -225,6 +230,8 @@ Found this helpful?  Star the repo to show support!
 - [View Source Code](main.py)
 - [Report an Issue](https://github.com/byambaa1982/usefulregex/issues)
 - [Fork This Repo](https://github.com/byambaa1982/usefulregex/fork)
+- [🌐 DataLogicHub.com - Practice Tests](https://www.datalogichub.com/)
+- [🌐 DataLogicHub.net - Learning Code](https://www.datalogichub.net/)
 
 ---
 
