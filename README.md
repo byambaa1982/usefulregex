@@ -7,7 +7,7 @@
 
 Master pandas with battle-tested tips, tricks, and real-world examples. Plus a lightweight utility to clean messy numeric data without wrestling with regex.
 
-> 🌐 **Looking for more data science resources?** Visit [DataLogicHub.com](https://www.datalogichub.com/) and [DataLogicHub.net](https://www.datalogichub.net/) for tutorials, articles, and data analytics insights!
+> 🌐 **Looking for more resources?** Visit [DataLogicHub.com](https://www.datalogichub.com/) and [DataLogicHub.net](https://www.datalogichub.net/) for tutorials, articles, and data analytics insights!
 
 ---
 
