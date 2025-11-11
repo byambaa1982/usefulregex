@@ -21,100 +21,68 @@ Problem is that we cannot use following codes because of symbols like '--' or '-
 	or 
 
 	df['DataFrame Column'] = df['DataFrame Column'].astype(int)
+## usefulregex — clean numeric-looking strings without regex
+
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Python](https://img.shields.io/badge/python-%3E%3D3.8-blue)](https://www.python.org/)
+
+A tiny utility to convert messy numeric-like strings (for example `"59.55 `, `1200M`, `--`) into floats so you can work with `pandas` without blowing up on bad cells.
+
+This project shows a simple approach that avoids complex regular expressions and provides an executable script plus a Python API you can import.
+
+Features
+- Robust conversion of mixed strings to float (returns `NaN` for non-parsable values)
+- Convert columns by name or by index in a CSV
+- Small, easy-to-read implementation intended for data-cleaning quick tasks
+
+Screenshot
+
+![Raw data example](/images/data_pic.png)
+
+Quick start
+
+1. Install requirements (recommended in a venv):
+
+```powershell
+pip install -r requirements.txt
 ```
-Let's take a look at one of following cells.
+
+2. Run the CLI to clean columns (example):
+
+```powershell
+python main.py data/raw.csv -c 2 Temperature Distance -o data/cleaned.csv
+```
+
+This accepts column indices (0-based) and column names mixed together.
+
+Python API
+
+You can also use the functions from Python:
 
 ```python
-	print(df['Temperature'][0])
-	print(df['Apparent temperature'][0])
-	print(df['Distance'][0])
+from main import change_df, anystring_to_float
+import pandas as pd
+
+df = pd.read_csv('data/raw.csv')
+clean = change_df(df, ['Temperature', 2])  # convert column named 'Temperature' and the 3rd column
 ```
-Results:
-	
-	59.55   
-	59.55
-	1200M
 
+Why this approach?
 
-The first two looks like floats,but it will give us 'str' not 'float'.
-```python
-	print(type(df['Temperature'][0]))
-	print(type(df['Apparent temperature'][0]))
-	print(type(df['Distance'][0]))
-```
-Results:
+- Some datasets include characters like `-`, `--`, `M`, or letters inside numbers. `pandas.to_numeric` fails on those unless you pre-clean. This project provides a pragmatic cleaner.
 
-	<class 'str'>
-	<class 'str'>
-	<class 'str'>
+Contributing
 
+If you find the approach useful, please open an issue or a pull request. Small suggestions:
 
-Befor going further, start simple
+- Add unit tests for edge cases
+- Add GitHub Actions for CI
+- Add more parsing rules (thousands separators, currency, parentheses for negatives)
 
-    string ='3ad.23'
-    
-Let's clean this string. '3ad.23' is not digit. 
+License
 
+This project is MIT licensed — see the `LICENSE` file.
 
-	def anystring_to_float(string):
-	  newstring ="" 
-	  my_float=""
-	  count=0
-	  try:
-	    for a in string: 
-	        if a=='.' or (a.isnumeric()) == True: 
-	            count+= 1
-	            my_float+=a
-	        else: 
-	            newstring+= a 
-	    # print(count) 
-	    # print(newstring) 
-	    # print('data type of {} is now {}'.format(num, type(num)))
-	    return float(my_float)
-	  except:
-	    return np.nan
+Contact
 
-	anystring_to_float(string)
-
-String might be like that "--". Then the function make it into numpy null value. 
-
-Now we can use it for pandas Dataframe. 
-
-	def change_df(df):
-	  for i in indice_of_columns:
-	    print(df.columns[i])
-	    df[df.columns[i]]=df[df.columns[i]].map(lambda row:anystring_to_float(row))
-	  return df
-
-Here indice_of_columns is the indice of columns we want to change. In our case, it is 
-
-	indice_of_columns=[5,7,8,9]
-
-Finally, we can run the function 'change_df' and get result. 
-Let's check them:
-
-	print(type(df['Temperature'][0]))
-	print(type(df['Apparent temperature'][0]))
-	print(type(df['Distance'][0]))
-
-New result: 
-
-	<class 'float'>
-	<class 'float'>
-	<class 'float'>
-
-
-### Cleaned data
-
-![Data](/images/data_pic2.png)
-
-
-That simple!
-
-
-Please connect me in linkedin: 
-	https://www.linkedin.com/in/byamba-enkhbat-026722162/
-	
-	
-Hire me here:
-	www.fiverr.com/coderjs
+LinkedIn: https://www.linkedin.com/in/byamba-enkhbat-026722162/
